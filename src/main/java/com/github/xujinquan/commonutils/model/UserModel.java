@@ -1,5 +1,6 @@
 package com.github.xujinquan.commonutils.model;
 
+import com.github.xujinquan.commonutils.annotation.Query;
 import lombok.Builder;
 import lombok.Data;
 
@@ -13,8 +14,10 @@ import lombok.Data;
 @Builder
 public class UserModel {
 
+    @Query
     private int userId;
 
+    @Query(type = Query.Type.INNER_LIKE)
     private String userName;
 
 }
